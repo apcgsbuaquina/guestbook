@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import GuestbookForm from './components/GuestbookForm';
 import GuestbookList from './components/GuestbookList';
 
-const API_URL = 'http://localhost:3000/guestbook';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/guestbook';
 
 function App() {
   const [entries, setEntries] = useState([]);

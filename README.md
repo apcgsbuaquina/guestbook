@@ -100,16 +100,21 @@ cd ../frontend
 npm install
 ```
 
-### 2. Configure Supabase
+### 2. Configure Environment Variables
 
-Edit `backend/.env` with your Supabase project credentials:
+#### For Local Development:
+Edit `backend/.env` with your Supabase credentials.
 
-```env
-SUPABASE_URL=https://your-project-id.supabase.co
-SUPABASE_KEY=your-anon-or-service-role-key
-```
+#### For Vercel Deployment:
+You must add the following **Environment Variables** in the Vercel project settings:
 
-You can find these values in your Supabase project dashboard under Settings > API.
+**Backend Project Settings:**
+- `SUPABASE_URL`: Your Supabase Project URL
+- `SUPABASE_KEY`: Your Supabase Anon Key
+- `FRONTEND_URL`: The production URL of your frontend (e.g., `https://guestbook-frontend.vercel.app`)
+
+**Frontend Project Settings:**
+- `VITE_API_URL`: The production URL of your backend + `/guestbook` (e.g., `https://guestbook-backend.vercel.app/guestbook`)
 
 ### 3. Create the Database Table
 
