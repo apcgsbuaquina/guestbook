@@ -9,6 +9,7 @@ A full-stack Guestbook web application where visitors can leave their name and a
 | Frontend  | React (Vite) + Tailwind CSS  |
 | Backend   | NestJS                       |
 | Database  | Supabase (PostgreSQL)        |
+| Deployment| Vercel                       |
 
 ## Project Structure
 
