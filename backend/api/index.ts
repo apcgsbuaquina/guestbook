@@ -12,9 +12,8 @@ async function bootstrap() {
         const app = await NestFactory.create(AppModule, new ExpressAdapter(expressApp));
 
         app.enableCors({
-            origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+            origin: '*',
             methods: 'GET,POST',
-            credentials: true,
         });
 
         app.useGlobalPipes(
