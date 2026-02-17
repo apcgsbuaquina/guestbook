@@ -10,6 +10,7 @@ function App() {
 
   const fetchEntries = async () => {
     try {
+      console.log('Fetching entries from:', API_URL);
       const res = await fetch(API_URL);
       if (!res.ok) throw new Error('Failed to fetch');
       const data = await res.json();
