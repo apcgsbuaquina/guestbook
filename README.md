@@ -105,16 +105,17 @@ npm install
 #### For Local Development:
 Edit `backend/.env` with your Supabase credentials.
 
-#### For Vercel Deployment:
-You must add the following **Environment Variables** in the Vercel project settings:
+#### For Vercel Deployment (IMPORTANT):
+You must deploy the **Frontend** and **Backend** as **two separate Vercel projects**.
 
-**Backend Project Settings:**
+**1. Backend Config (Root Directory: `backend`)**
 - `SUPABASE_URL`: Your Supabase Project URL
 - `SUPABASE_KEY`: Your Supabase Anon Key
-- `FRONTEND_URL`: The production URL of your frontend (e.g., `https://guestbook-frontend.vercel.app`)
+*(Note: CORS is set to allow all origins, so `FRONTEND_URL` is not required)*
 
-**Frontend Project Settings:**
-- `VITE_API_URL`: The production URL of your backend + `/guestbook` (e.g., `https://guestbook-backend.vercel.app/guestbook`)
+**2. Frontend Config (Root Directory: `frontend`)**
+- `VITE_API_URL`: The full URL of your deployed backend + `/guestbook`
+  - Example: `https://your-backend-project.vercel.app/guestbook`
 
 ### 3. Create the Database Table
 
